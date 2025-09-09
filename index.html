@@ -4,17 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportsTech Correct Alignment</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <!-- botpress -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/05/20/15/20250520155129-11GY02KP.js" defer></script>
+    <!-- Hotjar Tracking Code for Sportstech Care -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3766603,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
   </head>
-  <body>
+  
+  <body class="support-page-bot-icons">
     <div class="container-fluid top-blacky ">
       <div class="container-fluid navbar-background ">
         <div class="container p-3">
@@ -49,14 +61,21 @@
                 </div>
   
                 <!-- Right Section: Flag + Shop (Desktop only) -->
-                <div class="right-section ">
-                  <a href="https://www.sportstech.de/" class="nav-link" target="_blank">Shop</a>
-                  <div class="flag-container">
-                    <div class="german-flag-section">
-                      <img src="assets/geman-flag.png" alt="" />
+                <div class="right-section d-none d-lg-flex align-items-center">
+                  <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank" data-translate="nav.shop">Shop</a>
+                  <!-- Language Dropdown -->
+                  <div class="language-selector" onclick="toggleLangList(event)">
+                    <!-- Selected Language -->
+                    <div class="selected-lang">
+                      <img id="currentFlag" src="assets/german-flag.png" alt="German">
                     </div>
+                    <!-- Dropdown List -->
+                    <ul class="lang-list" id="langList"></ul>
                   </div>
+                
+                
                 </div>
+
   
                 <!-- Mobile Hamburger -->
                 <!-- <button
@@ -155,7 +174,8 @@
                    Already a Sportstech customer? Our customer service is here to help:
                    Track your order, solve technical issues, and get fast answers anytime.
                  </p>
-                 <button class="intro-card-btn">Chat with Support</button>
+                 <button class="intro-card-btn" data-translate="cards.service.button"
+                onclick="window.gleenWidget.open()">Chat with Support</button>
                </div>
          
                <div class="intro-card">
@@ -165,7 +185,8 @@
                    Get personalized advice, discover the right Sportstech product for your goals,
                    and receive support with your order – quick and easy.
                  </p>
-                 <button class="intro-card-btn">Chat with Sales</button>
+                  <button class="intro-card-btn " data-translate="cards.advisor.button" 
+                  id="salesChatBtn">Chat with Sales</button>
                </div>
              </section>
          
@@ -460,8 +481,8 @@
         ></video>
         </div>
         <!-- Chat Button -->
-        <div class="chat-button" onclick="openChat()">
-          <img src="assets/chatbot.png" alt="">
+        <div class="chat-button" onclick="window.gleenWidget.open()">
+          <img src="assets/chatbot.png" alt="Chatbot">
         </div>
       </section>
     </div>
@@ -478,7 +499,35 @@
       </div>
       
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+  
+
+
+    <!-- Gleen Chat alhena bot Widget -->
+<script>
+  document.gleenConfig = {
+    company: "sportstech-eu",
+    apiBaseUrl: "https://eu.alhena.ai"
+  };
+</script>
+<script src="https://eu.alhena.ai/sdk/gleenWidget.js"></script>
+<script>
+  window.gleenWidget.on("icebreaker_question:postback", (data) => {
+    window.open("https://chat.sportstech.link/", "_blank");
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const salesBtn = document.getElementById("salesChatBtn");
+
+    if (salesBtn) {
+      salesBtn.addEventListener("click", function() {
+        if (window.botpress && window.botpress.open) {
+          window.botpress.open();
+          updateStatus('opened'); 
+        }
+      });
+    }
+  });
+</script>
   </body>
 </html>
