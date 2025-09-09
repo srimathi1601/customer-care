@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsTech Correct Alignment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid top-blacky ">
+      <div class="container-fluid navbar-background ">
+        <div class="container p-3">
+          <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+              <div class="navbar-content">
+                <!-- Left Section: Logo + Navigation -->
+                <div class="left-section">
+                  <!-- Logo -->
+                  <a class="navbar-brand" href="#">
+                    <div class="brand-text">
+                      <img
+                        src="assets/logo.png"
+                        alt="logo.png"
+                        class="logo-image"
+                      />
+                    </div>
+                  </a>
+  
+                  <!-- Left Navigation (Desktop only) -->
+                  <div class="left-nav ">
+                    <div class="nav-item">
+                      <i class="fa-solid fa-angle-left back-icon"></i>
+                      <a class="nav-link" href="#">Home</a>
+                    </div>
+                    <div class="nav-item">
+                      <a class="nav-link-sub mt-1" href="#"
+                        >Products Help & Setup</a
+                      >
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Right Section: Flag + Shop (Desktop only) -->
+                <div class="right-section ">
+                  <a href="https://www.sportstech.de/" class="nav-link" target="_blank">Shop</a>
+                  <div class="flag-container">
+                    <div class="german-flag-section">
+                      <img src="assets/geman-flag.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Mobile Hamburger -->
+                <!-- <button
+                  class="navbar-toggler d-lg-none"
+                  type="button"
+                  onclick="toggleMobileMenu()"
+                >
+                  <div class="hamburger-icon" id="hamburgerIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button> -->
+              </div>
+  
+              <!-- Mobile Menu -->
+              <!-- <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-nav-item">
+                  <span class="mobile-back-icon">&lt;</span>
+                  <a href="#" class="mobile-nav-link">Home</a>
+                </div>
+                <div class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">Products Help & Setup</a>
+                </div>
+                <div class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">About</a>
+                </div>
+                <div class="mobile-nav-item">
+                  <a href="#" class="mobile-nav-link">Contact</a>
+                </div>
+                <div class="mobile-bottom">
+                  <a href="#" class="mobile-shop">Shop</a>
+                  <div class="flag-container mobile-flag">
+                    <div class="german-flag"></div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="container-fluid">
+          <div class="background-overlay ">
+              <div class="page-container mb-xl-4">
+             <!-- Hero Section -->
+             <section class="hero">
+               <header class="header">
+                 <!-- Red container with perfect carousel -->
+              <div class="carousel-container">
+           <div class="carousel-track">
+             <div class="carousel-item"><img src="assets/images/icon1.png" alt="icon1"></div>
+             <div class="carousel-item"><img src="assets/images/icon2.png" alt="icon2"></div>
+             <div class="carousel-item"><img src="assets/images/icon3.png" alt="icon3"></div>
+             <div class="carousel-item"><img src="assets/images/icon4.png" alt="icon4"></div>
+             <div class="carousel-item"><img src="assets/images/icon5.png" alt="icon5"></div>
+           </div>
+         </div>
+         
+               </header>
+         
+               <h1 class="hero-title">
+                 Your <span class="highlight">Movement.</span><br>
+                 <span class="highlight">Our</span> drive.
+               </h1>
+             </section>
+         
+             <!-- Search -->
+             <form role="search" class="search" data-search="" data-instant="true" autocomplete="off"
+             action="https://www.sportstech.care/hc/de/search" accept-charset="UTF-8" method="get">
+        
+         <!-- Hidden input for utf8 -->
+         <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+        
+         <!-- Custom search box wrapper -->
+         <div class="search-wrapper">
+           <div class="search-box">
+             <div class="input-container">
+               <img src="assets/images/logo2.png" alt="Logo" class="search-logo">
+               <!-- Replace default input -->
+               <input type="text" name="query" placeholder="Search for answers in seconds" autocomplete="off">
+               <button type="submit">
+                 <img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
+               </button>
+             </div>
+           </div>
+         </div>
+        
+       </form>
+         
+             <!-- Cards -->
+             <section class="intro-cards ">
+               <div class="intro-card">
+                 <img src="assets/images/card1.png" alt="Customer Service" class="intro-card-img">
+                 <h3 class="intro-card-title">Your direct <br> customer service</h3>
+                 <p class="intro-card-desc">
+                   Already a Sportstech customer? Our customer service is here to help:
+                   Track your order, solve technical issues, and get fast answers anytime.
+                 </p>
+                 <button class="intro-card-btn">Chat with Support</button>
+               </div>
+         
+               <div class="intro-card">
+                 <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
+                 <h3 class="intro-card-title">Product Advisor <br> Find your perfect device</h3>
+                 <p class="intro-card-desc">
+                   Get personalized advice, discover the right Sportstech product for your goals,
+                   and receive support with your order – quick and easy.
+                 </p>
+                 <button class="intro-card-btn">Chat with Sales</button>
+               </div>
+             </section>
+         
+             <!-- Knowledge Base -->
+             <a href="#" class="knowledge-link mb-xl-5">To the Knowledge Base</a>
+           </div>
+           </div>
+      </div>
+    </div>
+    <div class="container-fluid homepage-sectionone">
+      <section class="quick-access-section">
+        <div class="container-wrapper">
+          <h2 class="section-title">Quick Access Help</h2>
+
+          <div class="card-outer-layer p-2">
+            <div class="cards-wrapper">
+              <div class="row">
+                <div class="col-md-6 col-xl-6 col-lg-6 card-space">
+                  <div
+                    class="help-card service-card"
+                    onclick="handleCardClick('service-hotline')"
+                  >
+                    <div class="card-overlay">
+                        <a href="https://www.sportstech.de/rudergeraet" target="_blank" class="show-btn-exp">
+                            <div class="card-content">
+                                <h3 class="card-title mb-xl-2 mb-lg-2 pl-5">
+                                  Talk to Us (Service Hotline)
+                                </h3>
+                                <p class="card-desc" >
+                                  Need quick support or personal advice? Our support
+                                  heroes are just a call away. Dial: (+49) 030 868 224
+                                  64
+                                </p>
+                              </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-6 col-xl-6 col-lg-6 pl-xl-3 pl-lg-3 pr-xl-3 pr-lg-3"
+                >
+                  <div
+                    class="help-card video-card"
+                    onclick="handleCardClick('video-guides')"
+                  >
+                  <a href="https://sportstech.link/support/" target="_blank">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                          <h3 class="card-title mb-xl-2 mb-lg-2 pl-5">
+                            Step-by-Step Video Guides
+                          </h3>
+                          <p class="card-desc">
+                            Master your Product like a pro! Explore assembly
+                            videos,experts tips, and tutorials at your fingertips.
+                          </p>
+                        </div>
+                      </div>
+                  </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container-fluid explore-section">
+      <div class="container">
+        <div class="support-section">
+          <h1 class="section-heading mb-xl-5 mt-xl-5">Explore Support Topics</h1>
+
+          <!-- First Row: Large Product Help + Small Orders -->
+          <div class="first-row">
+            <div class="support-card product-help">
+              <!-- <div class="card-icon">
+                        <i class="fas fa-cog"></i>
+                    </div> -->
+              <h3 class="card-title-explore mt-xl-5 mt-lg-3 mt-md-5">Product Help & Setup</h3>
+              <p class="card-description">
+                Assembly instructions | Troubleshooting | FAQ | Smart usage
+                hacks
+              </p>
+              <div class="card-features mt-xl-5 mt-xl-5 mt-lg-5 mt-md-5">
+                <div class="feature-icon">
+                  <img src="assets/product1.png" alt="product1" class="m-3" />
+                </div>
+                <div class="feature-icon">
+                  <img src="assets/product2.png" alt="product2" />
+                </div>
+                <div class="feature-icon">
+                  <img src="assets/product3.png" alt="product3" />
+                </div>
+                <div class="feature-icon">
+                  <img src="assets/product4.png" alt="product4" />
+                </div>
+                <div class="feature-icon">
+                  <img src="assets/product5.png" alt="product5" />
+                </div>
+              </div>
+              <button
+                class="card-button mt-xl-5 mt-xl-5 mt-lg-5 mt-md-5"
+               
+              >
+               <a  href="https://www.sportstech.care/hc/de/categories/4405102643730-Produktratgeber-Produkthilfe" target="_blank" class="show-btn-exp mt-xl-0 mt-lg-5 mt-md-5">Show all posts</a> 
+              </button>
+            </div>
+
+            <div class="support-card orders-deliveries">
+              <div class="order-image">
+                <img src="assets/order.png" alt="" class="order-img"/>
+              </div>
+              <h3 class="card-title-explore mt-xl-3">Orders & Deliveries</h3>
+              <p class="card-description">
+                Track packages | Invoices | Cancellations | Shipping updates
+              </p>
+              <button class="card-button" >
+                <a href="https://www.sportstech.care/hc/de/categories/4405102643730-Produktratgeber-Produkthilfe" class="show-btn-exp" target="_blank">Show all posts</a>
+             
+              </button>
+            </div>
+          </div>
+
+          <!-- Second Row: Small Payments + Large Warranty -->
+          <div class="second-row mt-xl-5">
+            <div class="support-card payments-billing mt-xl-4 mt-lg-5 mt-md-5 mt-5">
+              <div class="payment-img">
+                <img src="assets/payment.png" alt="" class="payment-image"/>
+              </div>
+              <h3 class="card-title-explore">Payments & Billing</h3>
+              <p class="card-description">
+                Online methods | Discounts | Secure checkout | Subscriptions
+              </p>
+              <button class="card-button" >
+                <a href="https://www.sportstech.care/hc/de/categories/4405102178194-Zahlungsmethoden" class="show-btn-exp" target="_blank">Show all posts</a>
+              </button>
+            </div>
+
+            <div class="support-card warranty-returns mt-xl-4">
+              <h3 class="card-title-explore mt-xl-5 mt-lg-5 mt-md-5 mt-5">Warranty & Returns</h3>
+              <p class="card-description mb-xl-5 mb-lg-5 mb-md-5 mb-5">
+                Exchanges | Repairs | Refunds | Product upgrades
+              </p>
+              <div class="product-icons mt-xl-5 mt-lg-5 mt-md-5 mt-5">
+                <div class="product-icon">
+                  <img src="assets/warranty1.png" alt="warranty1" />
+                </div>
+                <div class="product-icon">
+                  <img src="assets/warranty2.png" alt="warranty2" />
+                </div>
+                <div class="product-icon">
+                  <img src="assets/warranty3.png" alt="warranty3" />
+                </div>
+                <div class="product-icon">
+                  <img src="assets/warranty4.png" alt="warranty4" />
+                </div>
+              </div>
+              <button
+                class="card-button mt-xl-5 mt-lg-5 mt-md-5 mt-5"
+               
+              >
+              <a href="https://www.sportstech.care/hc/de/categories/4405102178194-Zahlungsmethoden" class="show-btn-exp" target="_blank">Show all posts</a>
+             
+              </button>
+            </div>
+          </div>
+
+          <!-- Third Row: Large Brand Store + Small Sportstech -->
+          <div class="third-row mt-xl-5 mb-xl-5">
+            <div class="wide-card mt-xl-5">
+              <div style="color: white; font-size: 48px">
+                <img src="assets/brandstore.png" alt="brandstore" class="berlin-image" />
+              </div>
+              <div class="wide-card-content">
+                <h3 class="wide-card-title">Brand Store Berlin</h3>
+                <p class="wide-card-description">
+                  Try before you buy! Visit us at our flagship store for an
+                  in-person experience
+                </p>
+                <button class="card-button mb-xl-3 mb-lg-5 mb-md-5" >
+                  <a href="https://www.sportstech.care/hc/de/categories/4405110346130-Brand-Store-Berlin" class="show-btn-exp" target="_blank"> Show all posts</a>
+                </button>
+              </div>
+            </div>
+
+            <div class="wide-card mt-xl-5">
+                <a href="https://www.sportstech.care/hc/de/categories/4406436991122-Sportstech-Live-App" target="_blank" class="show-btn-exp">
+                    <div class="wide-card-image sportstech-bg">
+                        <img src="assets/liveapp.png" alt="liveapp" class="app-liveimage"/>
+                        <!-- <div style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); width: 50px; height: 50px; background: #e53e3e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+                                    <i class="fas fa-play"></i>
+                                </div> -->
+                      </div>
+                      <div class="wide-card-content1">
+                        <h3 class="wide-card-title">Sportstech Live App</h3>
+                        <p class="wide-card-description1 mt-xl-3">
+                          Control, track & connect with your fitness gear anytime.
+                        </p>
+                      </div>
+                </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 🔹 Dual Section -->
+<section class="dual-section">
+    <div class="dual-card left-card">
+      <h2 class="dual-title">Need to Return a Product?</h2>
+      <p class="dual-desc">
+        Fast & hassle free returns,<br>
+        we’ll guide you every step of the way.
+      </p>
+      <a href="https://run.sportstechbrands.com/public/pmo/6b1940f50f9de5e2203b1d162fb548be" target="_blank">
+        <button class="dual-btn dark-btn">
+          <img src="assets/images/globe-icon.png" alt="Return Icon"> 
+           Go to Return Portal
+       </button>
+      </a>
+     
+    </div>
+  
+    <div class="dual-card right-card">
+      <h2 class="dual-title">Wanna Try </br>Before You Buy?</h2>
+      <p class="dual-desc">Experience our gear in action at the </br/> Berlin Brand Store.</p>
+      <div class="text-right">
+        <a href="https://www.sportstech.de/store-berlin" target="_blank">
+          <button class="dual-btn light-btn">
+            <img src="assets/images/plane-icon.png" alt="Store Icon">
+            Take Me There
+          </button>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- 🔹 Stay Connected -->
+  <div class="social-footer mb-xl-5">
+  
+    <div class="social-footer-content">
+      <div class="social-footer-left">
+        <h3 class="social-footer-title">Stay Connected</h3>
+        <p class="social-footer-text">
+          Follow us on social media for fitness tips, updates & exclusive deals!
+        </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sportstech.de/" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/Sportstech_DE" target="_blank"><img src="assets/images/twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/sportstech.official/" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCTmBbah6pRIifGJ5a815bWA/videos" target="_blank"><img src="assets/images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid">
+      <section class="hero-section">
+        <!-- Left Section with Content -->
+        <div class="section-left mt-xl-3 mt-lg-3 mt-md-5">
+          <!-- Brand Logo -->
+          <div class="brand-logo-container">
+            <!-- <div class="brand-logo"></div> -->
+            <span class="brand-name mt-xl-5"><img src="assets/logo.png" alt="" class="footer-logo mt-xl-5"></span>
+          </div>
+          <!-- Company Title -->
+          <h2 class="company-title">
+            Sportstech Brands<br />
+            <span class="company-title">Holding GmbH</span>
+          </h2>
+          <!-- Main Slogan -->
+          <h1 class="main-slogan">
+            <span class="slogan-line">PUSHING LIMITS.</span>
+            <span class="slogan-line">BREAKING BARRIERS.</span>
+            <span class="slogan-line">REDEFINING FITNESS.</span>
+          </h1>
+        </div>
+        <!-- Right Section with Athlete Image -->
+        <div class="section-right mt-xl-3 mt-lg-3 mt-md-5 mt-5">
+          <!-- <img src="assets/footer-right.png" alt="Athletic person training" /> -->
+          <video 
+          src="assets/footer-right.mp4" 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+        ></video>
+        </div>
+        <!-- Chat Button -->
+        <div class="chat-button" onclick="openChat()">
+          <img src="assets/chatbot.png" alt="">
+        </div>
+      </section>
+    </div>
+    <div class="container-fluid">
+        <footer class="footer-section p-5">
+          <div class="footer-nav">
+            <a href="#" onclick="showSection('terms')">Terms & Conditions</a>
+            <span>|</span>
+            <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" onclick="showSection('imprint')">Imprint</a>
+          </div>
+        </footer>
+      </div>
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
