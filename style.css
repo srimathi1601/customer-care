@@ -1461,7 +1461,54 @@ body.support-page-bot-icons .bpFabWrapper {
       width: 60% !important;
     }
   }
-  @media only screen and (min-width: 1200px) and (max-width:1500px){
+  @media only screen and (min-width: 1440px) and (max-width:1500px){
+    .background-overlay {
+      background-size: cover !important;
+    }
+    .carousel-container{
+      width: 100px;
+      height: 100px;
+    }
+    .hero-title{
+      font-size: 50px !important;
+    }
+    .search-box {
+      width: 850px !important;
+      padding: 6px !important;
+    }
+    .input-container input {
+      font-size: 16px !important;
+    }
+    .input-container{
+      padding: 4px 10px !important;
+    }
+    .search-logo, .search-icon{
+      width: 36px !important;
+    }
+    .intro-card{
+      width: 350px !important;
+    }
+    .intro-card-desc{
+      font-size: 12px !important;
+    }
+    .knowledge-link {
+      font-size: 16px !important;
+    }
+    .section-left{  
+        background-size: contain;
+      padding: 0% 4% 2% 14% !important;
+    }
+    .section-right {
+      width: 60% !important;
+    }
+    .slogan-line{
+      font-size: 40px !important;
+    }
+    .section-right video{
+      height: 510px;
+    }
+  }
+  @media only screen and (min-width: 1200px) and (max-width:1400px){
     .page-container{
       height: 80vh !important;
     }
