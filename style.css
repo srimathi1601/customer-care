@@ -1447,7 +1447,7 @@ body.support-page-bot-icons .bpFabWrapper {
 }
   @media only screen and (min-width: 1500px) and (max-width: 1900px){
     .page-container{
-      height: 80vh !important;
+      height: unset !important;
     }
     .carousel-container{
       width: 100px !important;
@@ -2253,6 +2253,29 @@ body.support-page-bot-icons .bpFabWrapper {
  .card-desc{
   font-size: 12px !important;
   padding: 3%;
+ }
+ .page-container{
+  padding: unset !important;
+ }
+ .intro-cards{
+  background-color: #fff !important;
+  padding: 5% !important;
+ }
+ .intro-card{
+  width: 400px !important;
+ }
+ .knowledge-link{
+  margin-bottom: 40px !important;
+ }
+ .knowlege-space{
+  background-color: #282c43 !important;
+  width: 100% !important;
+ }
+ .search-box{
+  width: 400px !important;
+ }
+ .background-overlay{
+  background-image: url('assets/images/mobile-banner.png');
  }
 }
 
