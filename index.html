@@ -207,7 +207,7 @@
         <div class="container-wrapper">
           <h2 class="section-title" data-translate="quickAccess.title">Quick Access Help</h2>
 
-          <div class="card-outer-layer p-2">
+          <div class="card-outer-layer p-2 desktop-view">
             <div class="cards-wrapper">
               <div class="row">
                 <div class="col-md-6 col-xl-6 col-lg-6 card-space">
@@ -256,13 +256,62 @@
               </div>
             </div>
           </div>
+          <div class="card-outer-layer p-2 mobile-view">
+            <div class="cards-wrapper">
+              <div class="row">
+                <div class="col-md-6 col-xl-6 col-lg-6 col-12 card-space">
+                  <div
+                    class="help-card service-card"
+                    onclick="handleCardClick('service-hotline')"
+                  >
+                    <div class="card-overlay">
+                        <a href="https://www.sportstech.de/rudergeraet" target="_blank" class="show-btn-exp">
+                            <div class="card-content">
+                                <h3 class="card-title mb-xl-2 mb-lg-2 pl-5" data-translate="quickAccess.hotline.title">
+                                  Talk to Us (Service Hotline)
+                                </h3>
+                                <p class="card-desc" data-translate="quickAccess.hotline.desc">
+                                  Need quick support or personal advice? Our support heroes are just a call away. Dial: 
+                                  (+49) 030 868 224 64
+                                </p>
+                              </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-6 col-xl-6 col-lg-6 col-12 pl-xl-3 pl-lg-3 pr-xl-3 pr-lg-3"
+                >
+                  <div
+                    class="help-card video-card mt-4"
+                    onclick="handleCardClick('video-guides')"
+                  >
+                  <a href="https://sportstech.link/support/" target="_blank">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                          <h3 class="card-title mb-xl-2 mb-lg-2 pl-5" data-translate="quickAccess.video.title">
+                            Step-by-Step Video Guides
+                          </h3>
+                          <p class="card-desc" data-translate="quickAccess.video.desc">
+                            Master your product like a pro! Explore assembly videos, expert tips, and tutorials at your fingertips.
+                          </p>
+                        </div>
+                      </div>
+                  </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
     <div class="container-fluid explore-section">
       <div class="container">
         <div class="support-section">
-          <h1 class="section-heading mb-xl-5 mt-xl-5" data-translate="explore.title">Explore Support Topics</h1>
+          <h1 class="section-heading mb-xl-5 mt-xl-5 mt-lg-5 mt-md-5 pt-5" data-translate="explore.title">Explore Support Topics</h1>
 
           <!-- First Row: Large Product Help + Small Orders -->
           <div class="first-row">
@@ -319,7 +368,7 @@
 
           <!-- Second Row: Small Payments + Large Warranty -->
           <div class="second-row mt-xl-5">
-            <div class="support-card payments-billing mt-xl-4 mt-lg-5 mt-md-5 mt-5">
+            <div class="support-card payments-billing mt-xl-4 mt-lg-5 mt-md-5 ">
               <div class="payment-img">
                 <img src="assets/payment.png" alt="" class="payment-image"/>
               </div>
@@ -340,16 +389,16 @@
               </p>
               <div class="product-icons mt-xl-5 mt-lg-5 mt-md-5 mt-5">
                 <div class="product-icon">
-                  <img src="assets/warranty1.png" alt="warranty1" />
+                  <img src="assets/warranty1.png" alt="warranty1" class="product-icon-image"/>
                 </div>
                 <div class="product-icon">
-                  <img src="assets/warranty2.png" alt="warranty2" />
+                  <img src="assets/warranty2.png" alt="warranty2" class="product-icon-image"/>
                 </div>
                 <div class="product-icon">
-                  <img src="assets/warranty3.png" alt="warranty3" />
+                  <img src="assets/warranty3.png" alt="warranty3" class="product-icon-image"/>
                 </div>
                 <div class="product-icon">
-                  <img src="assets/warranty4.png" alt="warranty4" />
+                  <img src="assets/warranty4.png" alt="warranty4" class="product-icon-image"/>
                 </div>
               </div>
               <button
@@ -364,10 +413,11 @@
           </div>
 
           <!-- Third Row: Large Brand Store + Small Sportstech -->
-          <div class="third-row mt-xl-5 mb-xl-5">
+          <div class="third-row mt-xl-5 mb-xl-5 pb-4">
             <div class="wide-card mt-xl-5">
               <div style="color: white; font-size: 48px">
-                <img src="assets/brandstore.png" alt="brandstore" class="berlin-image" />
+                <img src="assets/brandstore.png" alt="brandstore" class="berlin-image desktop-view" />
+                <img src="assets/images/brand-mobile.png" alt="brandstore" class="berlin-image mobile-view" />
               </div>
               <div class="wide-card-content">
                 <h3 class="wide-card-title" data-translate="explore.store.title">Brand Store Berlin</h3>
@@ -498,7 +548,7 @@
     <div class="container-fluid mobile-view">
       <div class="row">
         <div class="col-12">
-          <div class="section-left mt-xl-3 mt-lg-3 mt-md-5 mt-3">
+          <div class="section-left mt-xl-3 mt-lg-3 mt-md-5">
             <!-- Company Title -->
             <span class="brand-name mt-xl-5"><img src="assets/logo.png" alt="" class="footer-logo mt-xl-5 mt-lg-5 mt-md-5 mt-5 pt-3 mb-5"></span>
             <h2 class="company-title mb-xl-0 mb-lg-0 mb-5" data-translate="footer.company">
