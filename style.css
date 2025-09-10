@@ -1030,72 +1030,7 @@ margin: 0 auto; */
     font-family: "Halbfett", sans-serif;
   }
   
-  .carousel-container {
-    width: 80px;
-    height: 80px;
-    background: #e4002b;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 25px rgba(228, 0, 43, 0.4);
-  }
-   
-  .carousel-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-   
-  .carousel-item {
-    position: absolute;
-    top: 50%;
-    left: -100px;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all 0.35s ease;
-  }
-   
-  .carousel-item.active {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    animation: shakeX 0.5s ease-in-out;
-  }
-   
-  .carousel-item.exit {
-    left: 100px;
-    opacity: 0;
-  }
-   
-  /* Smaller white icons */
-  .carousel-item img {
-    width: 28px;
-    height: auto;
-    filter: brightness(0) invert(1);
-  }
-   
-  /* Horizontal shake only - quick */
-/* Horizontal shake only - quick */
-@keyframes shakeX {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(calc(-50% - 4px), -50%);
-  }
-  50% {
-    transform: translate(calc(-50% + 4px), -50%);
-  }
-  75% {
-    transform: translate(calc(-50% - 2px), -50%);
-  }
-}
-  
+
   /* Search */
   .search-wrapper {
     display: flex;
@@ -1103,6 +1038,22 @@ margin: 0 auto; */
     align-items: center;
     width: 100%;
     padding: 20px 0;
+  }
+  .search-submit {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .search-icon {
+    width: 32px;
+    height: auto;
+    display: block;
   }
   .search-box {
     position: relative;
@@ -1421,6 +1372,62 @@ body.support-page-bot-icons .bpFabWrapper {
   width: 24px;
   height: auto;
 }
+
+
+/* Perfect Carousel inside red box */
+.carousel-container {
+  width: 80px;
+  height: 80px;
+  background: #e4002b;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(228, 0, 43, 0.4);
+}
+ 
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+ 
+/* base: centered and hidden */
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%); /* stay centered */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.carousel-item img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+.carousel-item.active {
+  opacity: 1;              /* always visible */
+  z-index: 2;
+  pointer-events: auto;
+  animation: shakeX 0.5s ease-in-out;
+}
+ 
+.carousel-item.exit {
+  opacity: 0;              /* fades out after new one shows */
+  z-index: 1;
+}
+/* Horizontal shake only - quick */
+@keyframes shakeX {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25%      { transform: translate(calc(-50% - 4px), -50%); }
+  50%      { transform: translate(calc(-50% + 4px), -50%); }
+  75%      { transform: translate(calc(-50% - 2px), -50%); }
+}
 @media only screen and (min-width: 1900px){
   .page-container {
     text-align: center;
@@ -1545,7 +1552,7 @@ body.support-page-bot-icons .bpFabWrapper {
       display: none !important;
     }
     .page-container{
-      height: 80vh !important;
+      height: 100vh !important;
     }
     .hero-title {
       font-size: 40px !important;
@@ -1586,7 +1593,7 @@ body.support-page-bot-icons .bpFabWrapper {
       display: none !important;
     }
     .page-container{
-      height: 80vh !important;
+      height: 100vh !important;
     }
     .hero-title {
       font-size: 40px !important;
@@ -2241,7 +2248,7 @@ body.support-page-bot-icons .bpFabWrapper {
  }
  .card-title{
   font-size: 20px !important;
-  padding: 3%;
+  padding: 3% !important;
  }
  .card-desc{
   font-size: 12px !important;
