@@ -2112,17 +2112,141 @@ body.support-page-bot-icons .bpFabWrapper {
   text-decoration: underline !important;
 }
 .social-footer {
-  background: url('assets/mobile-stay.png') no-repeat center / cover;
-  border-radius: 12px;
-  display: flex
-;
+  background: url('assets/mobile-stay.png') no-repeat center center;
+  background-size: cover; /* Stretch to cover left & right */
+  border-radius: unset !important;
+  display: flex;
   justify-content: center;
-  /* padding: 40px; */
   margin: 0 auto;
   flex-wrap: wrap;
   box-sizing: border-box;
+  width: 100%;        /* Full width */
   max-width: 100%;
+  padding: 40px 0 !important;
 }
+
+.social-footer-title {
+  font-size: 25px !important;
+}
+.social-footer-text{
+  font-size: 12px !important;
+}
+.social-footer-content{
+  padding: unset !important;
+  justify-content: center !important;
+}
+.social-icons{
+  flex: unset !important;
+  margin-top: 5%;
+}
+.social-footer{
+  padding: 40px 0px 40px 0px !important;
+}
+.dual-section{
+  background-image: url("assets/images/dual-mobile-bg.png") !important;
+  background-size: cover !important;
+  border-radius: unset !important;
+  margin: unset !important;
+}
+.dual-title{
+  font-size: 30px !important;
+  text-align: center !important;
+
+}
+.dual-card{
+  align-items: center !important;
+}
+.third-row {
+  grid-template-columns: unset !important;
+}
+ .berlin-image{
+  width: 100% !important;
+  background-size: cover !important;
+ }
+ .second-row {
+  grid-template-columns: unset !important;
+  display: flex !important;
+  flex-direction: column !important;
+ }
+ .explore-section {
+  padding: unset !important;
+ }
+ .wide-card-title {
+  font-size: 20px !important;
+ }
+ .wide-card-description1 {
+  font-size: 12px !important;
+ }
+ .wide-card {
+  height: 350px !important;
+ }
+
+.wide-card-description {
+  font-size: 12px !important;
+}
+.payment-image{
+  width: 100% !important;
+}
+.card-title-explore {
+  font-size: 20px !important;
+}  
+.card-description{
+  font-size: 12px !important;
+}
+.product-icons{
+  gap: 60px !important;
+}
+.product-icon{
+  width: 30px !important;
+  height: 30px !important;
+}
+.product-icon-image{
+  width: 70px !important;
+}
+.first-row{
+  grid-template-columns: unset !important;
+}
+.section-heading{
+  font-size: 35px !important;
+}
+.container-wrapper{
+  margin: unset !important;
+}
+.section-title{
+  font-size: 35px !important;
+}
+ /* Prevent zoom on hover */
+ .help-card:hover,
+ .help-card:hover::before {
+   transform: none !important;
+   box-shadow: none !important;
+ }
+
+ /* Keep description always visible */
+ .help-card .card-desc {
+   max-height: none !important;
+   opacity: 1 !important;
+   transform: none !important;
+   transition: none !important;
+ }
+
+ /* Remove hover-triggered description animation */
+ .help-card:hover .card-desc {
+   max-height: none !important;
+   opacity: 1 !important;
+   transform: none !important;
+ }
+ .help-card {
+  height: 235px !important;
+ }
+ .card-title{
+  font-size: 20px !important;
+  padding: 3%;
+ }
+ .card-desc{
+  font-size: 12px !important;
+  padding: 3%;
+ }
 }
 
  
