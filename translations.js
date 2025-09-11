@@ -266,7 +266,6 @@ const translations = {
   }
 };
 
-// Language configuration with flag paths and display names
 const languageConfig = {
   'en': { flag: 'assets/english-flag.png', name: 'English (GB)' },
   'de': { flag: 'assets/german-flag.png', name: 'German' },
@@ -274,24 +273,33 @@ const languageConfig = {
   'fr': { flag: 'assets/france-flag.png', name: 'French' },
   'it': { flag: 'assets/italy-flag.png', name: 'Italian' }
 };
-function toggleLangList(event) {
-  const list = document.getElementById("langList");
-  list.style.display = (list.style.display === "block") ? "none" : "block";
-  event.stopPropagation();
-}
-
-// Close dropdown when clicking outside
-document.addEventListener("click", () => {
-  document.getElementById("langList").style.display = "none";
-});
-
 
 // Current language state
 let currentLanguage = 'de'; // Default to German
 
 /**
+ * Toggle dropdown (desktop or mobile)
+ */
+function toggleLangList(event, type) {
+  const listId = type === 'mobile' ? 'langListMobile' : 'langListDesktop';
+  const list = document.getElementById(listId);
+
+  if (list) {
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+
+  event.stopPropagation();
+}
+
+// Close all dropdowns when clicking outside
+document.addEventListener("click", () => {
+  document.querySelectorAll(".lang-list").forEach(list => {
+    list.style.display = "none";
+  });
+});
+
+/**
  * Initialize the language system
- * Checks for saved preferences and URL parameters
  */
 function initializeLanguage() {
   // Check for saved language preference in sessionStorage
@@ -299,7 +307,7 @@ function initializeLanguage() {
   if (savedLanguage && translations[savedLanguage]) {
     currentLanguage = savedLanguage;
   }
-  
+
   // Check URL parameter for language override
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get('lang');
@@ -307,18 +315,17 @@ function initializeLanguage() {
     currentLanguage = langParam;
     sessionStorage.setItem('selectedLanguage', currentLanguage);
   }
-  
+
   // Apply the determined language
   applyTranslations(currentLanguage);
   updateLanguageDisplay(currentLanguage);
 }
 
 /**
- * Apply translations to all elements with data-translate attributes
- * @param {string} language - The language code to apply
+ * Apply translations to elements with data-translate attributes
  */
 function applyTranslations(language) {
-  // Handle regular text translations
+  // Regular text
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
     const key = element.getAttribute('data-translate');
@@ -326,8 +333,8 @@ function applyTranslations(language) {
       element.innerHTML = translations[language][key];
     }
   });
-  
-  // Handle placeholder translations for input fields
+
+  // Placeholders
   const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
   placeholderElements.forEach(element => {
     const key = element.getAttribute('data-translate-placeholder');
@@ -335,47 +342,61 @@ function applyTranslations(language) {
       element.placeholder = translations[language][key];
     }
   });
-  
-  // Update document language attribute for accessibility
+
+  // Accessibility
   document.documentElement.lang = language;
 }
 
 /**
- * Update the language dropdown display
- * @param {string} language - The current language code
+ * Update the language dropdowns (desktop & mobile)
  */
-// Build dropdown list dynamically (excluding current)
 function updateLanguageDisplay(language) {
-  const currentFlag = document.getElementById("currentFlag");
-  const langList = document.getElementById("langList");
+  // Desktop
+  const currentFlagDesktop = document.getElementById("currentFlagDesktop");
+  const langListDesktop = document.getElementById("langListDesktop");
+  if (currentFlagDesktop && langListDesktop) {
+    currentFlagDesktop.src = languageConfig[language].flag;
+    currentFlagDesktop.alt = languageConfig[language].name;
+    buildLangList(langListDesktop, language);
+  }
 
-  currentFlag.src = languageConfig[language].flag;
-  currentFlag.alt = languageConfig[language].name;
+  // Mobile
+  const currentFlagMobile = document.getElementById("currentFlagMobile");
+  const langListMobile = document.getElementById("langListMobile");
+  if (currentFlagMobile && langListMobile) {
+    currentFlagMobile.src = languageConfig[language].flag;
+    currentFlagMobile.alt = languageConfig[language].name;
+    buildLangList(langListMobile, language);
+  }
+}
 
-  langList.innerHTML = "";
+/**
+ * Build dropdown options dynamically
+ */
+function buildLangList(listEl, currentLang) {
+  listEl.innerHTML = "";
   Object.keys(languageConfig).forEach(code => {
-    if (code !== language) {
+    if (code !== currentLang) {
       const li = document.createElement("li");
       li.innerHTML = `<img src="${languageConfig[code].flag}" alt="${languageConfig[code].name}"> ${languageConfig[code].name}`;
       li.onclick = () => changeLanguage(code);
-      langList.appendChild(li);
+      listEl.appendChild(li);
     }
   });
 }
 
 /**
  * Change the current language
- * @param {string} language - The language code to switch to
  */
 function changeLanguage(language) {
   if (translations[language]) {
     currentLanguage = language;
     sessionStorage.setItem("selectedLanguage", language);
 
-    // Apply translations to the page
+    // Apply translations
     applyTranslations(language);
 
-    // Update flag and rebuild dropdown
+    // Update dropdowns
     updateLanguageDisplay(language);
 
     // Update URL without reload
@@ -390,45 +411,25 @@ function changeLanguage(language) {
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const saved = sessionStorage.getItem("selectedLanguage");
-  if (saved && languageConfig[saved]) currentLanguage = saved;
-  updateLanguageDisplay(currentLanguage);
-});
 /**
- * Get the current language
- * @returns {string} The current language code
+ * Helpers
  */
 function getCurrentLanguage() {
   return currentLanguage;
 }
-
-/**
- * Get available languages
- * @returns {Array} Array of available language codes
- */
 function getAvailableLanguages() {
   return Object.keys(translations);
 }
-
-/**
- * Get translation for a specific key
- * @param {string} key - The translation key
- * @param {string} language - Optional language code (uses current if not provided)
- * @returns {string} The translated text or the key if translation not found
- */
 function getTranslation(key, language = currentLanguage) {
   if (translations[language] && translations[language][key]) {
     return translations[language][key];
   }
-  return key; // Fallback to key if translation not found
+  return key; // fallback
 }
 
-// Export functions for use in other modules (if using ES6 modules)
-// If using traditional script tags, these functions are already global
-
-// Auto-initialize when DOM is loaded
+// Auto-init
 document.addEventListener('DOMContentLoaded', function() {
+  const saved = sessionStorage.getItem("selectedLanguage");
+  if (saved && languageConfig[saved]) currentLanguage = saved;
   initializeLanguage();
 });

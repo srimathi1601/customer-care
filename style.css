@@ -1326,12 +1326,17 @@ margin: 0 auto; */
   
   /* Tablets / medium devices */
 /* Hide Botpress launcher ONLY on support page */
+div#helix-chat-container .css-nk3rc2{
+  position: fixed !important;
+  bottom: 100px !important;
+}
 body.support-page-bot-icons div#helix-chat-container .css-100yxne,
 body.support-page-bot-icons .bpFabWrapper {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
+  
 }
 .language-selector {
   position: relative;
@@ -1601,9 +1606,10 @@ body.support-page-bot-icons .bpFabWrapper {
     .mobile-view{
       display: none !important;
     }
-    .page-container{
+
+    /* .page-container{
       height: 100vh !important;
-    }
+    } */
     .hero-title {
       font-size: 40px !important;
     }
@@ -1704,6 +1710,7 @@ body.support-page-bot-icons .bpFabWrapper {
       background-size: contain !important;
       padding: 4% 0% 0% 10% !important;
   }
+  
   .section-right video{
     height: 364px !important;
   }
@@ -1780,9 +1787,10 @@ body.support-page-bot-icons .bpFabWrapper {
       background-size: contain !important;
       padding: 2% 10% 3% 15%;
   }
-    .page-container{
+
+    /* .page-container{
       height: 80vh !important;
-    }
+    } */
   .section-right video {
     height: 310px !important;
   }
@@ -1839,7 +1847,7 @@ body.support-page-bot-icons .bpFabWrapper {
     width: 100%;
   }
   .product-icons{
-    gap: 60px !important;
+    gap: 40px !important;
   }
   .product-icon{
     width: 40px !important;
@@ -1868,6 +1876,9 @@ body.support-page-bot-icons .bpFabWrapper {
     .background-overlay{
       background-size: cover !important;
     }
+    .product-icon-image{
+      width: 50px !important;
+    }
 }
   @media only screen and (min-width: 600px) and (max-width: 800px){
     .desktop-view{
@@ -1879,9 +1890,22 @@ body.support-page-bot-icons .bpFabWrapper {
     .background-overlay{
       background-size: cover !important;
     }
-    .page-container{
-      height: 90vh !important;
+    .section-title{
+      font-size: 50px !important;
     }
+    .container-wrapper{
+      margin: 0% 1% !important;
+    }
+    .card-title {
+      font-size: 19px !important;
+    }
+    .card-desc {
+      font-size: 11px !important;
+    }
+
+    /* .page-container{
+      height: 90vh !important;
+    } */
     .section-left {
       background-size: contain !important;
       padding: 0% 10% 0% 15%;
@@ -2034,7 +2058,7 @@ body.support-page-bot-icons .bpFabWrapper {
   }
 
 /* Mobile Portrait View */
-@media only screen and (max-width: 576px) and (orientation: portrait) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
   .desktop-view{
     display: none !important;
   }
@@ -2053,7 +2077,7 @@ body.support-page-bot-icons .bpFabWrapper {
     text-align: center;
   }
   .slogan-line{
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
   .section-left {
     width: 100%;
@@ -2061,7 +2085,7 @@ body.support-page-bot-icons .bpFabWrapper {
     text-align: center;
     background-image: url(assets/mobile-footer.png) !important;
     background-size: cover;
-    height: 450px;
+    /* height: 500px; */
   }
 
   .brand-logo-container img {
@@ -2210,26 +2234,27 @@ body.support-page-bot-icons .bpFabWrapper {
   font-size: 12px !important;
 }
 .product-icons{
-  gap: 60px !important;
+  gap: 50px !important;
 }
 .product-icon{
   width: 30px !important;
   height: 30px !important;
 }
 .product-icon-image{
-  width: 70px !important;
+  width: 50px !important;
 }
 .first-row{
   grid-template-columns: unset !important;
+  display: unset !important;
 }
 .section-heading{
-  font-size: 35px !important;
+  font-size: 25px !important;
 }
 .container-wrapper{
   margin: unset !important;
 }
 .section-title{
-  font-size: 35px !important;
+  font-size: 30px !important;
 }
  /* Prevent zoom on hover */
  .help-card:hover,
@@ -2256,11 +2281,11 @@ body.support-page-bot-icons .bpFabWrapper {
   height: 235px !important;
  }
  .card-title{
-  font-size: 20px !important;
+  font-size: 16px !important;
   padding: 3% !important;
  }
  .card-desc{
-  font-size: 12px !important;
+  font-size: 10px !important;
   padding: 3%;
  }
  .page-container{
@@ -2283,6 +2308,7 @@ body.support-page-bot-icons .bpFabWrapper {
  }
  .search-box{
   width: 400px !important;
+  margin: 0% 5% !important;
  }
  /* .trainer-video-run{
   height: 265px !important;
@@ -2291,7 +2317,96 @@ body.support-page-bot-icons .bpFabWrapper {
     background: url("assets/images/mobile-banner.png") no-repeat center center;
     background-size: cover; /* adjust if needed */
   }
-
+  .trainer-video-run {
+    line-height: 0 !important;
+  }
+  .video-footer {
+    display: block !important;
+  }
+  .input-container { 
+    padding: 14px 6px !important;
+  }
+  .hero-title {
+    font-size: 30px !important;
+  }
+.order-img{
+  width: 100% !important;
 }
-
-  
+.card-features{
+  gap: 30px !important;
+}
+.logo-image {
+  width: auto !important;
+  height: 25px !important;
+}
+.support-card {
+  margin-bottom: 5% !important;
+}
+.second-row{
+  gap: unset !important;
+  margin-bottom: unset !important;
+}
+.third-row {
+  gap: unset !important;
+  margin-bottom: unset !important;
+}
+.input-container input {
+  font-size: 12px !important;
+}
+.help-card::before {
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+  background-position: top !important;
+}
+}
+@media only screen and (max-width: 450px) and (orientation: portrait) {
+  .search-box {
+    width: 350px !important;
+    margin: 0% 5% !important;
+}
+.section-title {
+  font-size: 25px !important;
+}
+.card-title {
+  font-size: 13px !important;
+  padding: 3% !important;
+}
+.section-heading {
+  font-size: 25px !important;
+}
+.card-title-explore {
+  font-size: 18px !important;
+}
+.feature-icon {
+  width: 25px !important;
+  height: 30px !important;
+}
+.product-icons {
+  gap: 40px !important;
+}
+.dual-title {
+  font-size: 25px !important;
+  text-align: center !important;
+}
+.dual-desc {
+  font-size: 13px !important;
+}
+.social-footer-title {
+  font-size: 20px !important;
+}
+.social-footer-text {
+  font-size: 10px !important;
+}
+.social-icons img {
+  width: 45px !important;
+}
+.company-title {
+  font-size: 18px;
+}
+.slogan-line {
+  font-size: 20px !important;
+}
+.footer-nav a {
+  font-size: 12px !important;
+}
+}

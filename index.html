@@ -28,7 +28,7 @@
   
   <body class="support-page-bot-icons">
     <div class="container-fluid top-blacky ">
-      <div class="container-fluid navbar-background ">
+      <div class="container-fluid navbar-background desktop-view">
         <div class="container p-3">
           <nav class="navbar navbar-custom">
             <div class="container-fluid">
@@ -65,16 +65,12 @@
                   <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank" 
                   data-translate="nav.shop">Shop</a>
                   <!-- Language Dropdown -->
-                  <div class="language-selector" onclick="toggleLangList(event)">
-                    <!-- Selected Language -->
+                  <div class="language-selector" onclick="toggleLangList(event, 'desktop')">
                     <div class="selected-lang">
-                      <img id="currentFlag" src="assets/german-flag.png" alt="German">
+                      <img id="currentFlagDesktop" src="assets/german-flag.png" alt="German">
                     </div>
-                    <!-- Dropdown List -->
-                    <ul class="lang-list" id="langList"></ul>
+                    <ul class="lang-list" id="langListDesktop"></ul>
                   </div>
-                
-                
                 </div>
 
   
@@ -116,6 +112,45 @@
               </div> -->
             </div>
           </nav>
+        </div>
+      </div>
+      <div class="container-fluid navbar-background mobile-view">
+        <div class="container-fluid navbar-background mobile-view">         
+          <div class="container p-3">           
+            <nav class="navbar navbar-custom">             
+              <div class="container-fluid">               
+                <div class="navbar-content">                 
+                  <!-- Left Section: Logo Only -->                 
+                  <div class="left-section">                   
+                    <!-- Logo -->                   
+                    <a class="navbar-brand" href="#">                     
+                      <div class="brand-text">                       
+                        <img
+                          src="assets/logo.png"
+                          alt="logo.png"
+                          class="logo-image"
+                        />                     
+                      </div>                   
+                    </a>                 
+                  </div>                    
+                  
+                  <!-- Right Section: Shop + Language Selector -->                 
+                  <div class="right-section d-flex align-items-center">                   
+                    <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank"
+                     data-translate="nav.shop">Shop</a>                   
+                    
+                    <!-- Language Dropdown -->                   
+                    <div class="language-selector" onclick="toggleLangList(event, 'mobile')">
+                      <div class="selected-lang">
+                        <img id="currentFlagMobile" src="assets/german-flag.png" alt="German">
+                      </div>
+                      <ul class="lang-list" id="langListMobile"></ul>
+                    </div>                                            
+                  </div>               
+                </div>               
+              </div>           
+            </nav>         
+          </div>       
         </div>
       </div>
       <div class="container-fluid">
