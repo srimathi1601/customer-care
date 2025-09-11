@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="container-fluid">
-          <div class="background-overlay ">
+          <div class="background-overlay desktop-view">
               <div class="page-container mb-xl-4">
              <!-- Hero Section -->
              <section class="hero">
@@ -146,70 +146,131 @@
              </section>
          
             <!-- Search -->
-<form role="search" class="search" data-search="" data-instant="true" 
-autocomplete="off"
-action="https://www.sportstech.care/hc/de/search" 
-accept-charset="UTF-8" 
-method="get">
+            <form role="search" class="search" data-search="" data-instant="true" 
+            autocomplete="off"
+            action="https://www.sportstech.care/hc/de/search" 
+            accept-charset="UTF-8" 
+            method="get">
 
-<!-- Hidden input for utf8 -->
-<input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+            <!-- Hidden input for utf8 -->
+            <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
 
-<!-- Custom search box wrapper -->
-<div class="search-wrapper">
-<div class="search-box">
-<div class="input-container">
-<img src="assets/images/logo2.png" alt="Logo" class="search-logo">
+            <!-- Custom search box wrapper -->
+            <div class="search-wrapper">
+            <div class="search-box">
+            <div class="input-container">
+            <img src="assets/images/logo2.png" alt="Logo" class="search-logo">
 
-  <!-- Search input -->
-<input type="text" name="query"  
-         data-translate="search.placeholder"
-         placeholder="Search for answers in seconds" 
-         autocomplete="off">
+              <!-- Search input -->
+            <input type="text" name="query"  
+                    data-translate="search.placeholder"
+                    placeholder="Search for answers in seconds" 
+                    autocomplete="off">
 
-  <!-- Submit button with image -->
-<button type="submit" class="search-submit">
-<img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
-</button>
-</div>
-</div>
-</div>
-</form>
-         
+              <!-- Submit button with image -->
+            <button type="submit" class="search-submit">
+            <img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
+            </button>
+            </div>
+            </div>
+            </div>
+            </form>
+           </div>
+          </div>
+          <div class="mobile-view">
+            <div class="background-overlay">
+              <div class="page-container mb-xl-4">
+                  <!-- Hero Section -->
+                <section class="hero">
+                  <header class="header">
+                    <!-- Red container with perfect carousel -->
+                    <div class="carousel-container">
+                      <div class="carousel-track">
+                      <div class="carousel-item"><img src="./assets/images/icon1.png" alt="icon1"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon2.png" alt="icon2"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon3.png" alt="icon3"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon4.png" alt="icon4"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon5.png" alt="icon5"></div>
+                      </div>
+                      </div>
+                  </header>
+            
+                    <h1 class="hero-title">
+                <span data-translate="hero.your">Your</span> 
+                <span class="highlight" data-translate="hero.movement">Movement.</span><br>
+                <span class="highlight" data-translate="hero.our">Our</span> 
+                <span data-translate="hero.drive">drive.</span>
+                </h1>
+            
+                </section>
+            
+                <!-- Search -->
+                <form role="search" class="search" data-search="" data-instant="true" 
+                autocomplete="off"
+                action="https://www.sportstech.care/hc/de/search" 
+                accept-charset="UTF-8" 
+                method="get">
+            
+                <!-- Hidden input for utf8 -->
+                <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+            
+                <!-- Custom search box wrapper -->
+                <div class="search-wrapper">
+                <div class="search-box">
+                <div class="input-container">
+                <img src="assets/images/logo2.png" alt="Logo" class="search-logo">
+            
+                  <!-- Search input -->
+                <input type="text" name="query"  
+                        data-translate="search.placeholder"
+                        placeholder="Search for answers in seconds" 
+                        autocomplete="off">
+            
+                  <!-- Submit button with image -->
+                <button type="submit" class="search-submit">
+                <img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
+                </button>
+                </div>
+                </div>
+                </div>
+                </form>
+              </div>
+            </div>
+                   
              <!-- Cards -->
              <section class="intro-cards ">
-                <div class="intro-card">
-               <img src="assets/images/card1.png" alt="Customer Service" class="intro-card-img">
-             <h3 class="intro-card-title" data-translate="cards.service.title">
-                  Your Direct <br> Customer Service
-                </h3>
+              <div class="intro-card">
+             <img src="assets/images/card1.png" alt="Customer Service" class="intro-card-img">
+           <h3 class="intro-card-title" data-translate="cards.service.title">
+                Your Direct <br> Customer Service
+              </h3>
 
-               <p class="intro-card-desc" data-translate="cards.service.desc">
-                Already a Sportstech customer? Our customer service is here to help: Track your order, 
-                solve technical issues, and get fast answers: anytime.
+             <p class="intro-card-desc" data-translate="cards.service.desc">
+              Already a Sportstech customer? Our customer service is here to help: Track your order, 
+              solve technical issues, and get fast answers: anytime.
+             </p>
+             <button class="intro-card-btn" data-translate="cards.service.button"
+              onclick="window.gleenWidget.open()">Chat with Support</button>
+           </div>
+       
+             <div class="intro-card">
+               <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
+                <h3 class="intro-card-title" data-translate="cards.advisor.title">Product Advisor <br> Find Your Perfect Device</h3>
+                <p class="intro-card-desc" data-translate="cards.advisor.desc">
+                 Get personalized advice, discover the right Sportstech product for your goals,
+                 and receive support with your order: quick and easy.
                </p>
-               <button class="intro-card-btn" data-translate="cards.service.button"
-                onclick="window.gleenWidget.open()">Chat with Support</button>
+                <button class="intro-card-btn" data-translate="cards.advisor.button"  data-translate="cards.advisor.button" 
+                id="salesChatBtn">Chat with Sales</button>
              </div>
-         
-               <div class="intro-card">
-                 <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
-                  <h3 class="intro-card-title" data-translate="cards.advisor.title">Product Advisor <br> Find Your Perfect Device</h3>
-                  <p class="intro-card-desc" data-translate="cards.advisor.desc">
-                   Get personalized advice, discover the right Sportstech product for your goals,
-                   and receive support with your order: quick and easy.
-                 </p>
-                  <button class="intro-card-btn" data-translate="cards.advisor.button"  data-translate="cards.advisor.button" 
-                  id="salesChatBtn">Chat with Sales</button>
-               </div>
-             </section>
-         
-             <!-- Knowledge Base -->
-             <div class="knowlege-space">
-                 <a href="#" class="knowledge-link mb-xl-5" data-translate="knowledge.link">To the Knowledge Base</a>
-             </div>
+           </section>
+       
+           <!-- Knowledge Base -->
+           <div class="knowlege-space">
+               <a href="#" class="knowledge-link mb-xl-5" data-translate="knowledge.link">To the Knowledge Base</a>
            </div>
-           </div>
+          </div>
+        
       </div>
     </div>
     <div class="container-fluid homepage-sectionone">

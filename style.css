@@ -2279,15 +2279,19 @@ body.support-page-bot-icons .bpFabWrapper {
  .knowlege-space{
   background-color: #282c43 !important;
   width: 100% !important;
+  text-align: center !important;
  }
  .search-box{
   width: 400px !important;
  }
- .background-overlay{
-  background-image: url('assets/images/mobile-banner.png');
- }
-}
+ /* .trainer-video-run{
+  height: 265px !important;
+ } */
+  .background-overlay {
+    background: url("assets/images/mobile-banner.png") no-repeat center center;
+    background-size: cover; /* adjust if needed */
+  }
 
- 
+}
 
   
