@@ -1,7 +1,7 @@
 const translations = {
   en: {
     'nav.home': 'Home',
-    'nav.products': 'Products Help & Setup',
+    'nav.products': 'Product Help & Setup',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.shop': 'Shop',
