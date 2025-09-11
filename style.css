@@ -1175,7 +1175,9 @@ margin: 0 auto; */
     text-decoration: underline;
     font-family: "Breitbuch", sans-serif;
   }
-  
+  .support-page-bot-icons{
+    background-color: #f8f9fa;
+  }
   /* 🔹 Dual Section */
   .dual-section {
     display: flex;
@@ -1183,11 +1185,12 @@ margin: 0 auto; */
     border-radius: 12px;
     overflow: hidden;
     margin: 30px auto;
-    max-width: 1100px;
+    max-width: 1360px;
     background-image: url("assets/images/dual-bg.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+ 
   }
   
   .dual-card {
