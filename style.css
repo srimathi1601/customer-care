@@ -4,30 +4,55 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "MyCustomFontone";
-  src: url("assets/fonts/So╠êhneBreit-Extraleicht.otf") format("opentype");
+  font-family: "Extraleicht";
+  src: url("assets/fonts/SoehneBreit-Extraleicht.otf") format("opentype");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "MyCustomFonttwo";
-  src: url("assets/fonts/So╠êhneBreit-Buch.otf") format("opentype");
+  font-family: "Breitbuch";
+  src: url("assets/fonts/SoehneBreit-Buch.otf") format("opentype");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-    font-family: "MyCustomFontthree";
-    src: url("assets/fonts/So╠êhne-Kra╠êftig.otf") format("opentype");
+    font-family: "Kraeftig";
+    src: url("assets/fonts/Soehne-Kraeftig.otf") format("opentype");
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: "MyCustomFontfour";
+    font-family: "HalbfettKursiv";
     src: url("assets/fonts/Breit-HalbfettKursiv.otf") format("opentype");
     font-style: normal;
     font-display: swap;
   }
-  
+  @font-face {
+    font-family: "Extrafett";
+    src: url("fassets/fonts/Soehne-Extrafett.otf") format("opentype");
+     font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Halbfett";
+    src: url("assets/fonts/Soehne-Halbfett.otf") format("opentype");
+     font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Dreiviertelfett";
+    src: url("assets/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
+     font-style: normal;
+    font-display: swap;
+  }
+ 
+  @font-face {
+    font-family: "Fett";
+    src: url("assets/fonts/SoehneBreit-Fett.otf") format("opentype");
+     font-style: normal;
+    font-display: swap;
+  }
+
 .navbar-background {
   background-color: #000000;
 }
@@ -136,16 +161,16 @@
   font-weight: 100;
   text-decoration: none;
   white-space: nowrap;
-  font-weight: bold;
-  font-family: "MyCustomFonttwo";
+  font-family: "Halbfett",sans-serif;
 }
 .nav-link-sub {
   color: #ffffff;
   font-size: 15px;
   text-decoration: none;
   white-space: nowrap;
-  font-weight: normal;
-  font-family: "MyCustomFontone";
+  font-family: "Breitbuch", sans-serif;
+  font-weight: 400;
+
 }
 
 .nav-link:hover {
@@ -184,8 +209,10 @@
 .shop-link {
   color: #ffffff;
   font-size: 14px;
-  font-weight: 400;
   text-decoration: none;
+  font-weight: 500;
+  font-family: "Kraeftig",sans-serif;
+
 }
 
 .shop-link:hover {
@@ -304,11 +331,11 @@
 .section-title {
   color: #ffffff;
   font-size: 50px;
-  font-weight: 900;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 0.02em;
-  font-family: "MyCustomFonttwo";
+  font-weight: 600;
+  font-family: "Breitbuch",sans-serif;
 }
 
 .container-wrapper {
@@ -395,13 +422,14 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  /* transition: all 0.9s ease-in-out; */
+  letter-spacing: 0.5px;
   font-size: 13px;
   line-height: 1.4;
   overflow: hidden;
   transform: translateY(10px);
   transition: all 0.6s ease;
-  font-family: "MyCustomFonttwo";
+  font-family: "Breitbuch",sans-serif;
+  font-weight: 400;
 }
 
 /* On hover, show description */
@@ -438,11 +466,10 @@
   position: relative;
   z-index: 2;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  font-family: "MyCustomFontone";
-  /* opacity: 0; */
   transform: none;
   transition: none;
-  font-weight: 900;
+  font-family: "Breitbuch", sans-serif;
+  font-weight: 400;
 }
 .help-card:hover .card-title {
   opacity: 1;
@@ -470,12 +497,12 @@ margin: 0 auto; */
 
 .section-heading {
   font-size: 50px;
-  font-weight: 700;
   color: #1a1a1a;
   text-align: center;
   margin-bottom: 40px;
   letter-spacing: -0.5px;
-  font-family: "MyCustomFonttwo";
+  font-weight: 600;
+  font-family: "Halbfett",sans-serif;
 }
 
 .support-card {
@@ -552,11 +579,11 @@ margin: 0 auto; */
 
 .card-title-explore {
   font-size: 25px;
-  font-weight: 600;
   color: #000;
   margin-bottom: 12px;
   text-align: center;
-  font-family: "MyCustomFonttwo";
+  font-weight: 500;
+   font-family: "Kraeftig",sans-serif;
 }
 
 .card-description {
@@ -565,7 +592,7 @@ margin: 0 auto; */
   text-align: center;
   line-height: 1.5;
   margin-bottom: 25px;
-  font-family: "MyCustomFonttwo";
+  font-family: "Kraeftig", sans-serif;
   padding: 0% 7%;
 }
 .order-image {
@@ -606,7 +633,7 @@ margin: 0 auto; */
   display: block;
   margin: 0 auto;
   text-decoration: none;
-  font-family: "MyCustomFontone";
+  font-family: "Breitbuch",sans-serif;
 }
 
 .card-button:hover {
@@ -701,10 +728,10 @@ margin: 0 auto; */
 }
 .wide-card-title {
   font-size: 25px;
-  font-weight: 600;
   color: #000;
   margin-bottom: 8px;
-  font-family: "MyCustomFonttwo";
+  font-weight: 500;
+  font-family: "Kraeftig",sans-serif;
 }
 
 .wide-card-description {
@@ -712,13 +739,15 @@ margin: 0 auto; */
   color: #666;
   line-height: 1.4;
   margin-bottom: 20px;
-  font-family: "MyCustomFonttwo";
+  font-weight: 500;
+   font-family: "Kraeftig",sans-serif;
+ 
 }
 .wide-card-description1 {
   color: #666;
   line-height: 1.4;
   margin-bottom: 20px;
-  font-family: "MyCustomFonttwo";
+  font-family: "Kraeftig", sans-serif;
   padding: 0% 17%;
   font-size: 16px;
 }
@@ -809,11 +838,11 @@ margin: 0 auto; */
 .company-title {
   color: white;
   font-size: 45px;
-  font-weight: 900;
   line-height: 1.2;
   margin-bottom: 50px;
   animation: fadeInUp 1s ease-out 0.3s both;
-  font-family: "MyCustomFontone";
+  font-family: "Breitbuch",sans-serif;
+  font-weight: 400;
 }
 .company-subtitle {
   font-weight: 400;
@@ -833,10 +862,11 @@ margin: 0 auto; */
   opacity: 0;
   transform: translateX(-80px);
   animation: slideInLeft 1s ease-out forwards;
-  font-family: "MyCustomFontfour";
   font-size: 52px;
   line-height: 1.2;
   word-spacing: 2px;
+  font-family: "Fett",sans-serif;
+  font-weight: 800;
 }
 .slogan-line:nth-child(1) {
   animation-delay: 0.6s;
@@ -863,11 +893,11 @@ margin: 0 auto; */
   .footer-nav a {
     color: #fff;                 /* white text */
     font-size: 17px;
-    /* font-weight: 400; */
     text-decoration: none;
     transition: color 0.3s;
-    font-family: "MyCustomFontthree";
     letter-spacing: 2px;
+    font-family: "Kraeftig",sans-serif;
+    font-weight: 500;
   }
   
   .footer-nav a:hover {
@@ -961,27 +991,6 @@ margin: 0 auto; */
   }
 }
 /* */
-/* Fonts */
-@font-face {
-    font-family: "Breitbuch";
-    src: url("assets/fonts/SoehneBreit-Buch.otf") format("opentype");
-  }
-  @font-face {
-    font-family: "Extrafett";
-    src: url("fassets/fonts/Soehne-Extrafett.otf") format("opentype");
-  }
-  @font-face {
-    font-family: "Halbfett";
-    src: url("assets/fonts/Soehne-Halbfett.otf") format("opentype");
-  }
-  @font-face {
-    font-family: "Kraeftig";
-    src: url("assets/fonts/Soehne-Kraeftig.otf") format("opentype");
-  }
-  @font-face {
-    font-family: "Dreiviertelfett";
-    src: url("assets/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
-  }
 .text-right{
     text-align: right;
   }
