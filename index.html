@@ -25,7 +25,7 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
   </head>
-  
+ 
   <body class="support-page-bot-icons">
     <div class="container-fluid top-blacky ">
       <div class="container-fluid navbar-background desktop-view">
@@ -45,7 +45,7 @@
                       />
                     </div>
                   </a>
-  
+ 
                   <!-- Left Navigation (Desktop only) -->
                   <div class="left-nav ">
                     <div class="nav-item">
@@ -59,10 +59,10 @@
                     </div> -->
                   </div>
                 </div>
-  
+ 
                 <!-- Right Section: Flag + Shop (Desktop only) -->
-                <div class="right-section d-none d-lg-flex align-items-center">
-                  <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank" 
+                <div class="right-section d-none d-lg-flex d-md-flex  align-items-center">
+                  <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank"
                   data-translate="nav.shop">Shop</a>
                   <!-- Language Dropdown -->
                   <div class="language-selector" onclick="toggleLangList(event, 'desktop')">
@@ -72,8 +72,8 @@
                     <ul class="lang-list" id="langListDesktop"></ul>
                   </div>
                 </div>
-
-  
+ 
+ 
                 <!-- Mobile Hamburger -->
                 <!-- <button
                   class="navbar-toggler d-lg-none"
@@ -87,7 +87,7 @@
                   </div>
                 </button> -->
               </div>
-  
+ 
               <!-- Mobile Menu -->
               <!-- <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-nav-item">
@@ -115,42 +115,42 @@
         </div>
       </div>
       <div class="container-fluid navbar-background mobile-view">
-        <div class="container-fluid navbar-background mobile-view">         
-          <div class="container p-3">           
-            <nav class="navbar navbar-custom">             
-              <div class="container-fluid">               
-                <div class="navbar-content">                 
-                  <!-- Left Section: Logo Only -->                 
-                  <div class="left-section">                   
-                    <!-- Logo -->                   
-                    <a class="navbar-brand" href="#">                     
-                      <div class="brand-text">                       
+        <div class="container-fluid navbar-background mobile-view">        
+          <div class="container p-3">          
+            <nav class="navbar navbar-custom">            
+              <div class="container-fluid">              
+                <div class="navbar-content">                
+                  <!-- Left Section: Logo Only -->                
+                  <div class="left-section">                  
+                    <!-- Logo -->                  
+                    <a class="navbar-brand" href="#">                    
+                      <div class="brand-text">                      
                         <img
                           src="assets/logo.png"
                           alt="logo.png"
                           class="logo-image"
-                        />                     
-                      </div>                   
-                    </a>                 
+                        />                    
+                      </div>                  
+                    </a>                
                   </div>                    
-                  
-                  <!-- Right Section: Shop + Language Selector -->                 
-                  <div class="right-section d-flex align-items-center">                   
+                 
+                  <!-- Right Section: Shop + Language Selector -->                
+                  <div class="right-section d-flex align-items-center">                  
                     <a href="https://www.sportstech.de/" class="nav-link me-3" target="_blank"
-                     data-translate="nav.shop">Shop</a>                   
-                    
-                    <!-- Language Dropdown -->                   
+                     data-translate="nav.shop">Shop</a>                  
+                   
+                    <!-- Language Dropdown -->                  
                     <div class="language-selector" onclick="toggleLangList(event, 'mobile')">
                       <div class="selected-lang">
                         <img id="currentFlagMobile" src="assets/german-flag.png" alt="German">
                       </div>
                       <ul class="lang-list" id="langListMobile"></ul>
                     </div>                                            
-                  </div>               
-                </div>               
-              </div>           
-            </nav>         
-          </div>       
+                  </div>              
+                </div>              
+              </div>          
+            </nav>        
+          </div>      
         </div>
       </div>
       <div class="container-fluid">
@@ -160,7 +160,7 @@
              <section class="hero">
                <header class="header">
                  <!-- Red container with perfect carousel -->
-                 <div class="carousel-container">
+                 <div class="carousel-container" id="desktopCarousel">
                   <div class="carousel-track">
                   <div class="carousel-item" ><img src="./assets/images/icon1.png" alt="icon1"></div>
                   <div class="carousel-item"><img src="./assets/images/icon2.png" alt="icon2"></div>
@@ -175,36 +175,36 @@
                </header>
          
                 <h1 class="hero-title">
-  <span data-translate="hero.your">Your</span> 
+  <span data-translate="hero.your">Your</span>
   <span class="highlight" data-translate="hero.movement">Movement.</span><br>
-  <span class="highlight" data-translate="hero.our">Our</span> 
+  <span class="highlight" data-translate="hero.our">Our</span>
   <span data-translate="hero.drive">drive.</span>
 </h1>
-
+ 
              </section>
          
             <!-- Search -->
-            <form role="search" class="search" data-search="" data-instant="true" 
+            <form role="search" class="search" data-search="" data-instant="true"
             autocomplete="off"
-            action="https://www.sportstech.care/hc/de/search" 
-            accept-charset="UTF-8" 
+            action="https://www.sportstech.care/hc/de/search"
+            accept-charset="UTF-8"
             method="get">
-
+ 
             <!-- Hidden input for utf8 -->
             <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
-
+ 
             <!-- Custom search box wrapper -->
             <div class="search-wrapper">
             <div class="search-box">
             <div class="input-container">
             <img src="assets/images/logo2.png" alt="Logo" class="search-logo">
-
+ 
               <!-- Search input -->
             <input type="text" name="query"  
                     data-translate="search.placeholder"
-                    placeholder="Search for answers in seconds" 
+                    placeholder="Search for answers in seconds"
                     autocomplete="off">
-
+ 
               <!-- Submit button with image -->
             <button type="submit" class="search-submit">
             <img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
@@ -220,9 +220,9 @@
              <h3 class="intro-card-title" data-translate="cards.service.title">
                   Your Direct <br> Customer Service
                 </h3>
-  
+ 
                <p class="intro-card-desc" data-translate="cards.service.desc">
-                Already a Sportstech customer? Our customer service is here to help: Track your order, 
+                Already a Sportstech customer? Our customer service is here to help: Track your order,
                 solve technical issues, and get fast answers: anytime.
                </p>
                <button class="intro-card-btn" data-translate="cards.service.button"
@@ -258,7 +258,7 @@
                 <section class="hero">
                   <header class="header">
                     <!-- Red container with perfect carousel -->
-                    <div class="carousel-container">
+                    <div class="carousel-container " id="mobileCarousel">
                       <div class="carousel-track">
                       <div class="carousel-item"><img src="./assets/images/icon1.png" alt="icon1"></div>
                       <div class="carousel-item"><img src="./assets/images/icon2.png" alt="icon2"></div>
@@ -271,38 +271,38 @@
                       </div>
                       </div>
                   </header>
-            
+           
                     <h1 class="hero-title">
-                <span data-translate="hero.your">Your</span> 
+                <span data-translate="hero.your">Your</span>
                 <span class="highlight" data-translate="hero.movement">Movement.</span><br>
-                <span class="highlight" data-translate="hero.our">Our</span> 
+                <span class="highlight" data-translate="hero.our">Our</span>
                 <span data-translate="hero.drive">drive.</span>
                 </h1>
-            
+           
                 </section>
-            
+           
                 <!-- Search -->
-                <form role="search" class="search" data-search="" data-instant="true" 
+                <form role="search" class="search" data-search="" data-instant="true"
                 autocomplete="off"
-                action="https://www.sportstech.care/hc/de/search" 
-                accept-charset="UTF-8" 
+                action="https://www.sportstech.care/hc/de/search"
+                accept-charset="UTF-8"
                 method="get">
-            
+           
                 <!-- Hidden input for utf8 -->
                 <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
-            
+           
                 <!-- Custom search box wrapper -->
                 <div class="search-wrapper">
                 <div class="search-box">
                 <div class="input-container">
                 <img src="assets/images/logo2.png" alt="Logo" class="search-logo">
-            
+           
                   <!-- Search input -->
                 <input type="text" name="query"  
                         data-translate="search.placeholder"
-                        placeholder="Search for answers in seconds" 
+                        placeholder="Search for answers in seconds"
                         autocomplete="off">
-            
+           
                   <!-- Submit button with image -->
                 <button type="submit" class="search-submit">
                 <img src="assets/images/search-icon.png" alt="Search Icon" class="search-icon">
@@ -321,9 +321,9 @@
            <h3 class="intro-card-title" data-translate="cards.service.title">
                 Your Direct <br> Customer Service
               </h3>
-
+ 
              <p class="intro-card-desc" data-translate="cards.service.desc">
-              Already a Sportstech customer? Our customer service is here to help: Track your order, 
+              Already a Sportstech customer? Our customer service is here to help: Track your order,
               solve technical issues, and get fast answers: anytime.
              </p>
              <button class="intro-card-btn" data-translate="cards.service.button"
@@ -351,14 +351,14 @@
                <a href="#" class="knowledge-link mb-xl-5" data-translate="knowledge.link">To the Knowledge Base</a>
            </div>
           </div>
-        
+       
       </div>
     </div>
     <div class="container-fluid homepage-sectionone">
       <section class="quick-access-section">
         <div class="container-wrapper">
           <h2 class="section-title" data-translate="quickAccess.title">Quick Access Help</h2>
-
+ 
           <div class="card-outer-layer p-2 desktop-view">
             <div class="cards-wrapper">
               <div class="row">
@@ -374,7 +374,7 @@
                                   Talk to Us (Service Hotline)
                                 </h3>
                                 <p class="card-desc" data-translate="quickAccess.hotline.desc">
-                                  Need quick support or personal advice? Our support heroes are just a call away. Dial: 
+                                  Need quick support or personal advice? Our support heroes are just a call away. Dial:
                                   (+49) 030 868 224 64
                                 </p>
                               </div>
@@ -382,7 +382,7 @@
                     </div>
                   </div>
                 </div>
-
+ 
                 <div
                   class="col-md-6 col-xl-6 col-lg-6 pl-xl-3 pl-lg-3 pr-xl-3 pr-lg-3"
                 >
@@ -423,7 +423,7 @@
                                   Talk to Us (Service Hotline)
                                 </h3>
                                 <p class="card-desc" data-translate="quickAccess.hotline.desc">
-                                  Need quick support or personal advice? Our support heroes are just a call away. Dial: 
+                                  Need quick support or personal advice? Our support heroes are just a call away. Dial:
                                   (+49) 030 868 224 64
                                 </p>
                               </div>
@@ -431,7 +431,7 @@
                     </div>
                   </div>
                 </div>
-
+ 
                 <div
                   class="col-md-6 col-xl-6 col-lg-6 col-12 pl-xl-3 pl-lg-3 pr-xl-3 pr-lg-3"
                 >
@@ -465,7 +465,7 @@
         <div class="container">
           <div class="support-section">
             <h1 class="section-heading mb-xl-5 mt-xl-5 mt-lg-5 mt-md-5 pt-5" data-translate="explore.title">Explore Support Topics</h1>
-  
+ 
             <!-- First Row: Large Product Help + Small Orders -->
             <div class="first-row">
               <div class="support-card product-help">
@@ -498,11 +498,11 @@
                   class="card-button mt-xl-5 mt-xl-5 mt-lg-5 mt-md-5"
                  
                 >
-                 <a  href="https://www.sportstech.care/hc/de/categories/4405102643730-Produktratgeber-Produkthilfe" 
-                 target="_blank" class="show-btn-exp mt-xl-0 mt-lg-5 mt-md-5"  data-translate="explore.showAll">Show all posts</a> 
+                 <a  href="https://www.sportstech.care/hc/de/categories/4405102643730-Produktratgeber-Produkthilfe"
+                 target="_blank" class="show-btn-exp mt-xl-0 mt-lg-5 mt-md-5"  data-translate="explore.showAll">Show all posts</a>
                 </button>
               </div>
-  
+ 
               <div class="support-card orders-deliveries">
                 <div class="order-image">
                   <img src="assets/order.png" alt="" class="order-img"/>
@@ -518,7 +518,7 @@
                 </button>
               </div>
             </div>
-  
+ 
             <!-- Second Row: Small Payments + Large Warranty -->
             <div class="second-row mt-xl-5">
               <div class="support-card payments-billing mt-xl-4 mt-lg-5 mt-md-5 ">
@@ -534,7 +534,7 @@
                    data-translate="explore.showAll" class="show-btn-exp" target="_blank">Show all posts</a>
                 </button>
               </div>
-  
+ 
               <div class="support-card warranty-returns mt-xl-4">
                 <h3 class="card-title-explore mt-xl-5 mt-lg-5 mt-md-5 mt-5" data-translate="explore.warranty.title">Warranty & Returns</h3>
                 <p class="card-description mb-xl-5 mb-lg-5 mb-md-5 mb-5" data-translate="explore.warranty.desc">
@@ -564,7 +564,7 @@
                 </button>
               </div>
             </div>
-  
+ 
             <!-- Third Row: Large Brand Store + Small Sportstech -->
             <div class="third-row mt-xl-5 mb-xl-5 pb-4">
               <div class="wide-card mt-xl-5">
@@ -579,12 +579,12 @@
                     in-person experience
                   </p>
                   <button class="card-button mb-xl-3 mb-lg-5 mb-md-5" >
-                    <a href="https://www.sportstech.care/hc/de/categories/4405110346130-Brand-Store-Berlin" 
+                    <a href="https://www.sportstech.care/hc/de/categories/4405110346130-Brand-Store-Berlin"
                     data-translate="explore.showAll" class="show-btn-exp" target="_blank"> Show all posts</a>
                   </button>
                 </div>
               </div>
-  
+ 
               <div class="wide-card mt-xl-5">
                   <a href="https://www.sportstech.care/hc/de/categories/4406436991122-Sportstech-Live-App" target="_blank" class="show-btn-exp">
                       <div class="wide-card-image sportstech-bg">
@@ -600,7 +600,7 @@
                           </p>
                         </div>
                   </a>
-  
+ 
               </div>
             </div>
           </div>
@@ -616,13 +616,13 @@
         </p>
         <a href="https://run.sportstechbrands.com/public/pmo/6b1940f50f9de5e2203b1d162fb548be" target="_blank">
           <button class="dual-btn dark-btn">
-            <img src="assets/images/globe-icon.png" data-translate="dual.return.button" alt="Return Icon"> 
+            <img src="assets/images/globe-icon.png" data-translate="dual.return.button" alt="Return Icon">
              Go to Return Portal
          </button>
         </a>
        
       </div>
-    
+   
       <div class="dual-card right-card">
         <h2 class="dual-title" data-translate="dual.store.title">Wanna Try </br>Before You Buy?</h2>
         <p class="dual-desc" data-translate="dual.store.desc">Experience our gear in action at the </br/> Berlin Brand Store.</p>
@@ -636,11 +636,11 @@
           </div>
       </div>
   </section>
-    
-    
+   
+   
     <!-- 🔹 Stay Connected -->
     <div class="social-footer mb-xl-5">
-    
+   
       <div class="social-footer-content">
         <div class="social-footer-left">
           <h3 class="social-footer-title"  data-translate="social.title">Stay Connected</h3>
@@ -681,18 +681,22 @@
         <!-- Right Section with Athlete Image -->
         <div class="section-right mt-xl-3 mt-lg-3 mt-md-5 mt-3">
           <!-- <img src="assets/footer-right.png" alt="Athletic person training" /> -->
-          <video 
-          src="assets/footer-right.mp4" 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
+          <video
+          src="assets/footer-right.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
         ></video>
         </div>
+ 
         <!-- Chat Button -->
         <div class="chat-button" onclick="window.gleenWidget.open()">
           <img src="assets/chatbot.png" alt="Chatbot">
         </div>
+ 
+           <button id="backToTop" title="Go to top"></button>
+ 
       </section>
     </div>
     <div class="container-fluid mobile-view">
@@ -715,12 +719,12 @@
         </div>
         <div class="col-12">
           <div class="trainer-video-run">
-            <video 
-            src="assets/footer-right.mp4" 
-            autoplay 
-            loop 
-            muted 
-            playsinline 
+            <video
+            src="assets/footer-right.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
             class="video-footer"
           ></video>
           </div>
@@ -740,9 +744,9 @@
           <a href="https://www.sportstech.de/impressum" target="_blank" onclick="showSection('imprint')" data-translate="footer.imprint">Imprint</a>
         </div>
       </footer>
-
+ 
       </div>
-
+ 
     <!-- Gleen Chat alhena bot Widget -->
 <script>
   document.gleenConfig = {
@@ -759,12 +763,12 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const salesBtns = document.querySelectorAll(".salesChatBtn");
-
+ 
     salesBtns.forEach(btn => {
       btn.addEventListener("click", function() {
         if (window.botpress && window.botpress.open) {
           window.botpress.open();
-          updateStatus('opened'); 
+          updateStatus('opened');
         }
       });
     });
@@ -772,3 +776,4 @@
 </script>
   </body>
 </html>
+ 

@@ -143,34 +143,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll(".carousel-item");
-    const maxIndex = 7; // only go up to 7
-    let current = 0;
+ 
+    function initCarousel(carouselId) {
+      const carousel = document.getElementById(carouselId);
+      const items = carousel.querySelectorAll(".carousel-item");
+      const maxIndex = items.length - 1;
+      let current = 0;
    
-    function showNext() {
-      // remove active from current
-      items[current].classList.remove("active");
+      function showNext() {
+        items[current].classList.remove("active");
+        current = (current === maxIndex) ? 0 : current + 1;
+        items[current].classList.add("active");
+        setTimeout(showNext, 1200); // loop every 1.2s
+      }
    
-      // move to next index (wrap at 7 → 0)
-      current = (current === maxIndex) ? 0 : current + 1;
-   
-      // add active to next
+      // Start carousel
       items[current].classList.add("active");
-   
-      // always same delay
-      const delay = 1200;
-   
-      console.log(`Current index: ${current}, Delay: ${delay}ms`);
-   
-      setTimeout(showNext, delay);
+      setTimeout(showNext, 1200);
     }
    
-    // start: first icon visible
-    items[current].classList.add("active");
+    // Initialize both carousels
+    initCarousel('desktopCarousel');
+    initCarousel('mobileCarousel');
    
-    // start loop
-    setTimeout(showNext, 1200);
   });
+   
    
   
   
