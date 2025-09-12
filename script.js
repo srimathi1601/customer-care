@@ -143,33 +143,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.carousel-item');
-    if (!items.length) return;
-   
+    const items = document.querySelectorAll(".carousel-item");
     let current = 0;
-   
-    // init first icon
-    items.forEach(el => el.classList.remove('active','exit'));
-    items[current].classList.add('active');
-   
+    
     function showNext() {
-      const prev = current;
-   
-      // move to next
+      // remove active from current
+      items[current].classList.remove("active");
+    
+      // move to next index
       current = (current + 1) % items.length;
-   
-      // new one becomes active immediately
-      items[current].classList.add('active');
-   
-      // old one fades out
-      items[prev].classList.remove('active');
-      items[prev].classList.add('exit');
-   
-      // cleanup after fade
-      setTimeout(() => {
-        items[prev].classList.remove('exit');
-      }, 400); // match CSS transition time
+    
+      // add active to next
+      items[current].classList.add("active");
+    
+      // determine next delay
+      let delay;
+      if (current === 0) {
+        // just wrapped around → show first icon immediately
+        delay = 1200; 
+      } else if (current === items.length - 1) {
+        // last icon → hold 5-8s
+        delay = 6000; // adjust to 5000–8000ms as needed
+      } else {
+        delay = 1200; // normal speed
+      }
+    
+      setTimeout(showNext, delay);
     }
-   
-    setInterval(showNext, 1200); // continuous loop
+    
+    // start: first icon visible
+    items[current].classList.add("active");
+    
+    // start loop
+    setTimeout(showNext, 1200);
+     
   });
+  

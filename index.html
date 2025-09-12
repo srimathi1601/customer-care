@@ -162,7 +162,7 @@
                  <!-- Red container with perfect carousel -->
                  <div class="carousel-container">
                   <div class="carousel-track">
-                  <div class="carousel-item"><img src="./assets/images/icon1.png" alt="icon1"></div>
+                  <div class="carousel-item" ><img src="./assets/images/icon1.png" alt="icon1"></div>
                   <div class="carousel-item"><img src="./assets/images/icon2.png" alt="icon2"></div>
                   <div class="carousel-item"><img src="./assets/images/icon3.png" alt="icon3"></div>
                   <div class="carousel-item"><img src="./assets/images/icon4.png" alt="icon4"></div>
@@ -229,16 +229,20 @@
                 onclick="window.gleenWidget.open()">Chat with Support</button>
              </div>
          
-               <div class="intro-card">
-                 <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
-                  <h3 class="intro-card-title" data-translate="cards.advisor.title">Product Advisor <br> Find Your Perfect Device</h3>
-                  <p class="intro-card-desc" data-translate="cards.advisor.desc">
-                   Get personalized advice, discover the right Sportstech product for your goals,
-                   and receive support with your order: quick and easy.
-                 </p>
-                  <button class="intro-card-btn" data-translate="cards.advisor.button"  data-translate="cards.advisor.button" 
-                  id="salesChatBtn">Chat with Sales</button>
-               </div>
+             <div class="intro-card">
+              <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
+              <h3 class="intro-card-title" data-translate="cards.advisor.title">
+                Product Advisor <br> Find Your Perfect Device
+              </h3>
+              <p class="intro-card-desc" data-translate="cards.advisor.desc">
+                Get personalized advice, discover the right Sportstech product for your goals,
+                and receive support with your order: quick and easy.
+              </p>
+              <!-- use class instead of id -->
+              <button class="intro-card-btn salesChatBtn" data-translate="cards.advisor.button">
+                Chat with Sales
+              </button>
+            </div>
              </section>
          
              <!-- Knowledge Base -->
@@ -261,6 +265,9 @@
                       <div class="carousel-item"><img src="./assets/images/icon3.png" alt="icon3"></div>
                       <div class="carousel-item"><img src="./assets/images/icon4.png" alt="icon4"></div>
                       <div class="carousel-item"><img src="./assets/images/icon5.png" alt="icon5"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon6.png" alt="icon6"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon7.png" alt="icon7"></div>
+                      <div class="carousel-item"><img src="./assets/images/icon8.png" alt="icon8"></div>
                       </div>
                       </div>
                   </header>
@@ -323,16 +330,20 @@
               onclick="window.gleenWidget.open()">Chat with Support</button>
            </div>
        
-             <div class="intro-card">
-               <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
-                <h3 class="intro-card-title" data-translate="cards.advisor.title">Product Advisor <br> Find Your Perfect Device</h3>
-                <p class="intro-card-desc" data-translate="cards.advisor.desc">
-                 Get personalized advice, discover the right Sportstech product for your goals,
-                 and receive support with your order: quick and easy.
-               </p>
-                <button class="intro-card-btn" data-translate="cards.advisor.button"  data-translate="cards.advisor.button" 
-                id="salesChatBtn">Chat with Sales</button>
-             </div>
+           <div class="intro-card">
+            <img src="assets/images/card2.png" alt="Product Advisor" class="intro-card-img">
+            <h3 class="intro-card-title" data-translate="cards.advisor.title">
+              Product Advisor <br> Find Your Perfect Device
+            </h3>
+            <p class="intro-card-desc" data-translate="cards.advisor.desc">
+              Get personalized advice, discover the right Sportstech product for your goals,
+              and receive support with your order: quick and easy.
+            </p>
+            <!-- use class instead of id -->
+            <button class="intro-card-btn salesChatBtn" data-translate="cards.advisor.button">
+              Chat with Sales
+            </button>
+          </div>
            </section>
        
            <!-- Knowledge Base -->
@@ -617,13 +628,12 @@
         <p class="dual-desc" data-translate="dual.store.desc">Experience our gear in action at the </br/> Berlin Brand Store.</p>
         <div class="text-right">
           <a href="https://www.sportstech.de/store-berlin" target="_blank">
-            <button class="dual-btn light-btn" data-translate="dual.store.button">
-              <img src="assets/images/plane-icon.png" alt="Store Icon">
-              Take Me There
-            </button>
+          <button class="dual-btn light-btn">
+          <img src="assets/images/plane-icon.png" alt="Store Icon">
+                    Take Me There
+          </button>
           </a>
-          
-        </div>
+          </div>
       </div>
   </section>
     
@@ -716,17 +726,21 @@
           </div>
         </div>
       </div>
+      <div class="chat-button" onclick="window.gleenWidget.open()">
+        <img src="assets/chatbot.png" alt="Chatbot">
+      </div>
     </div>
     <div class="container-fluid">
-        <footer class="footer-section p-xl-5 p-lg-3">
-          <div class="footer-nav">
-            <a href="#" onclick="showSection('terms')"  data-translate="footer.terms">Terms & Conditions</a>
-            <span>|</span>
-            <a href="#" onclick="showSection('privacy')" data-translate="footer.privacy">Privacy Policy</a>
-            <span>|</span>
-            <a href="#" onclick="showSection('imprint')" data-translate="footer.imprint">Imprint</a>
-          </div>
-        </footer>
+      <footer class="footer-section p-xl-5 p-lg-3">
+        <div class="footer-nav">
+          <a href="https://www.sportstech.de/agb" target="_blank" onclick="showSection('terms')"  data-translate="footer.terms">Terms & Conditions</a>
+          <span>|</span>
+          <a href="https://www.sportstech.de/datenschutz" target="_blank" onclick="showSection('privacy')" data-translate="footer.privacy">Privacy Policy</a>
+          <span>|</span>
+          <a href="https://www.sportstech.de/impressum" target="_blank" onclick="showSection('imprint')" data-translate="footer.imprint">Imprint</a>
+        </div>
+      </footer>
+
       </div>
 
     <!-- Gleen Chat alhena bot Widget -->
@@ -744,16 +758,16 @@
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const salesBtn = document.getElementById("salesChatBtn");
+    const salesBtns = document.querySelectorAll(".salesChatBtn");
 
-    if (salesBtn) {
-      salesBtn.addEventListener("click", function() {
+    salesBtns.forEach(btn => {
+      btn.addEventListener("click", function() {
         if (window.botpress && window.botpress.open) {
           window.botpress.open();
           updateStatus('opened'); 
         }
       });
-    }
+    });
   });
 </script>
   </body>
