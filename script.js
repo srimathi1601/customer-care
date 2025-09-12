@@ -144,38 +144,33 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll(".carousel-item");
+    const maxIndex = 7; // only go up to 7
     let current = 0;
-    
+   
     function showNext() {
       // remove active from current
       items[current].classList.remove("active");
-    
-      // move to next index
-      current = (current + 1) % items.length;
-    
+   
+      // move to next index (wrap at 7 → 0)
+      current = (current === maxIndex) ? 0 : current + 1;
+   
       // add active to next
       items[current].classList.add("active");
-    
-      // determine next delay
-      let delay;
-      if (current === 0) {
-        // just wrapped around → show first icon immediately
-        delay = 1200; 
-      } else if (current === items.length - 1) {
-        // last icon → hold 5-8s
-        delay = 6000; // adjust to 5000–8000ms as needed
-      } else {
-        delay = 1200; // normal speed
-      }
-    
+   
+      // always same delay
+      const delay = 1200;
+   
+      console.log(`Current index: ${current}, Delay: ${delay}ms`);
+   
       setTimeout(showNext, delay);
     }
-    
+   
     // start: first icon visible
     items[current].classList.add("active");
-    
+   
     // start loop
     setTimeout(showNext, 1200);
-     
   });
+   
+  
   

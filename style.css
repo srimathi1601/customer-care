@@ -1377,7 +1377,8 @@ body.support-page-bot-icons .bpFabWrapper {
   display: flex;
   align-items: center;
   padding: 5px 10px;
-  gap: 8px;
+  gap:"16px";
+font-size:"14px";
   cursor: pointer;
   transition: background 0.2s;
   font-family: "Breitbuch",sans-serif;
@@ -1399,121 +1400,47 @@ body.support-page-bot-icons .bpFabWrapper {
 /* Perfect Carousel inside red box */
 
 .carousel-container {
-
   width: 80px;
-
   height: 80px;
-
   background: #e4002b;
-
   border-radius: 24px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   overflow: hidden;
-
   position: relative;
-
   margin-bottom: 40px;
-
   box-shadow: 0 8px 25px rgba(228, 0, 43, 0.4);
-
 }
- 
-.carousel-track {
 
-  position: relative;
-
-  width: 100%;
-
-  height: 100%;
-
-}
- 
 .carousel-item {
-
   position: absolute;
-
   top: 50%;
-
-  left: -100px; 
-
-  transform: translateY(-50%);
-
-  opacity: 0;
-
-  transition: all 0.35s ease; 
-
-}
- 
-.carousel-item.active {
-
   left: 50%;
-
   transform: translate(-50%, -50%);
-
-  opacity: 1;
-
-  animation: shakeX 0.5s ease-in-out; 
-
-}
- 
-.carousel-item.exit {
-
-  left: 100px; 
-
   opacity: 0;
-
 }
- 
-/* Smaller white icons */
+
+.carousel-item.active {
+  opacity: 1;
+  animation: shakeX 0.5s ease-in-out;
+}
 
 .carousel-item img {
-
   width: 28px;
-
   height: auto;
-
-  filter: brightness(0) invert(1); 
-
+  filter: brightness(0) invert(1);
 }
- 
-/* Horizontal shake only - quick */
-
+.carousel-item:last-child.active {
+  animation: none; /* prevent delay for last icon */
+}
 @keyframes shakeX {
-
-  0%,
-
-  100% {
-
-    transform: translate(-50%, -50%);
-
-  }
-
-  25% {
-
-    transform: translate(calc(-50% - 4px), -50%);
-
-  }
-
-  50% {
-
-    transform: translate(calc(-50% + 4px), -50%);
-
-  }
-
-  75% {
-
-    transform: translate(calc(-50% - 2px), -50%);
-
-  }
-
+  0%, 100% { transform: translate(-50%, -50%); }
+  25% { transform: translate(calc(-50% - 4px), -50%); }
+  50% { transform: translate(calc(-50% + 4px), -50%); }
+  75% { transform: translate(calc(-50% - 2px), -50%); }
 }
- 
+
 @media only screen and (min-width: 1900px){
   .page-container {
     text-align: center;
